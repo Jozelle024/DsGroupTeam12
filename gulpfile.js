@@ -4,7 +4,7 @@
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var jshint = require('gulp-jshint');
+//var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 
 gulp.task('default',function(){
@@ -19,16 +19,18 @@ gulp.task('copiaFile', function(){
 
 // to configure jshint task
 
-gulp.task('jshint', function() {
+/*gulp.task('jshint', function() {
     return gulp.src('*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });
+*/
 
 gulp.task('sass', function(){
-    return gulp.src('./sass/*.scss')
+    return gulp.src('source/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('source/css'));
+        gutil.log('sass in esecuzione');
 });
 
 gulp.task('sassWatch',function(){
