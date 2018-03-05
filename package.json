@@ -1,0 +1,36 @@
+{
+  "name": "dsgroupteam12",
+  "version": "1.0.0",
+  "description": "Demo della settimana 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorrentmutie/DsGroupTeam12.git"
+  },
+  "keywords": [
+    "js",
+    "html",
+    "bootstrap",
+    "css",
+    "sass"
+  ],
+  "author": "Team12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorrentmutie/DsGroupTeam12/issues"
+  },
+  "homepage": "https://github.com/sorrentmutie/DsGroupTeam12#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.5"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0-alpha.6"
+  }
+}
