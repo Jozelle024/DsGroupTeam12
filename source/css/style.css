@@ -2,39 +2,24 @@ body {
     margin:0;
     padding: 0px;
 }
-header{
-    background-color:rgb(145, 140, 140);    
-}
 
 nav{
     display:flex;
-} 
- 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    flex-grow: 1;
-    background-color: #333;
+  
 }
 
-li {
-    float: left;
-    flex-grow: 1;
+.nav-item{
+    flex-grow:1;
 }
 
-li a {
-    display: block;
+
+.nav-style{ 
     color: white;
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
+    margin:0;
+    padding:10px;
 }
 
-li a:hover {
-    text-decoration: none;
-} 
+
 
   
   
