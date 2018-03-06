@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+}
+div#maincontainer {
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+}
+div#maincontainer main div#subcontainer {
+    width: 100%;
+    position: relative;
+}
+div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer, div#maincontainer main div#subcontainer div.rowcontainer div.colcontainerfade {
+    width: 50%;
+}
+div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer div.imgcontainer img {
+    width: auto;
+    max-width: 100%;;
+}
