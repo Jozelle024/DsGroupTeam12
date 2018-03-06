@@ -51,9 +51,102 @@
         </section>
         <h2>This ends the section</h2>
         
+        <!-- Modal Contattaci -->
+        <div class="modal fade" id="modalForm">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Contattaci</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <h2>Scrivici un messaggio.</h2>
+                  
+                  <form action="" method="POST" class="myForm" class="container">
+                      <div class="modal-rows">
+                        <div class="row">
+                                <label class="col-md-3">Nome: </label>
+                                <input class="col-md-8" type="text" placeholder="Nome" id="nome" required>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Email </label>
+                                <input class="col-md-8"type="email" placeholder="Email" id="email" required>
+        
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Telefono: </label>
+                                <input class="col-md-8"type="tel" placeholder="Numero di telefono" id="tel"required>
+                                
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Messaggio: </label>
+                                <textarea class="col-md-8"name="text" id="" cols="30" rows="10" placeholder="Scrivici un messaggio"required></textarea>
+        
+                            </div>
+                      </div>
+                    
+                  </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input class="btn btn-dark" type="submit" value="Submit">
+                    <input class="btn btn-dark" type="reset" value="Reset">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <!-- Modal contattaci -->
 
-        <!-- Modal -->
-        <!-- Modal -->
+        <!-- Modal Lavora con noi -->
+        <div class="modal fade" id="modalLavora">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Lavora con noi</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h2>Vuoi lavorare con noi? Invia il tuo curriculum e lasciaci un messaggio</h2>
+                      
+                      <div class="container modal-rows">
+                          <div class="row">
+                                <label class="col-md-3">File Input:</label>
+                                <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp">                          </div>
+                          <div class="row">
+                                <label class="col-md-3" >Email: </label>
+                                <input class="col-md-8"type="email" id="email" placeholder="Email">
+                          </div>
+                          <div class="row">
+                                <label class="col-md-3" >Messagio: </label>
+                                <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio"></textarea>
+                            </div>
+                          
+            
+                      </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input class="btn btn-dark" type="submit" value="Submit">
+                        <input class="btn btn-dark" type="reset" value="Reset">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            <!-- Modal lavora con noi -->
 
         <nav aria-label="Page navigation example">
             <ul class="pagination">
@@ -84,12 +177,12 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <h6 class="title font-weight-bold">
-                        <a href="#!"  data-toggle="modal" data-target="#modalForm">Contattaci</a>
+                        <a href="#modalForm"  data-toggle="modal">Contattaci</a>
                     </h6>
                 </div>
                 <div class="col-md-3 mb-3">
                     <h6 class="title font-weight-bold">
-                        <a href="#!">Lavora con Noi</a>
+                        <a href="#modalLavora" data-toggle="modal">Lavora con Noi</a>
                     </h6>
                 </div>
             </div>
@@ -137,6 +230,8 @@
         </div>
     </footer>
     <!-- Footer -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
