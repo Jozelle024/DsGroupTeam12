@@ -27,12 +27,12 @@ gulp.task('copiaFile', function(){
 */
 
 gulp.task('sass', function(){
-    return gulp.src('source/sass/*.scss')
+    return gulp.src('./source/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('source/css'));
-        gutil.log('sass in esecuzione');
+        .pipe(gulp.dest('./source/css'));
+        
 });
 
 gulp.task('sassWatch',function(){
-    gulp.watch('./sass/*.scss', ['sass']);
+    gulp.watch('./source/sass/*.scss', ['sass']);
 });

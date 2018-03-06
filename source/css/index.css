@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column; }
+
+main {
+  flex-grow: 1; }
+
+.dark {
+  background-color: #8374B3;
+  color: #100533; }
+
+a {
+  color: #100533; }
+  a:hover {
+    font-size: 24px; }

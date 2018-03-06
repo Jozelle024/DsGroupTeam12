@@ -1,4 +1,11 @@
 .dark{
-    background-color:grey;
-    color: white;
+    background-color:$primary-color;
+    color: $font-color;
 }
+a{
+    color: $font-color;
+    &:hover{
+        font-size: 24px;
+    }
+}
+
