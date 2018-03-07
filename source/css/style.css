@@ -90,13 +90,6 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.
     bottom: 0px;
     font-size: 1em;
 }
-div#prova {
-    border: 1px solid black;
-    height: 500px;
-    width: 100%;
-    position: relative;
-    margin-top: 800px;
-}
 .clearfix:after {
     content: "";
     display: table;
