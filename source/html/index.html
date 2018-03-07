@@ -149,18 +149,18 @@
                     <!-- Modal body -->
                     <div class="modal-body">
                       <h2>Vuoi lavorare con noi? Invia il tuo curriculum e lasciaci un messaggio</h2>
-                      
+                      <form action="" method="POST">
                       <div class="container modal-rows">
                           <div class="row">
                                 <label class="col-md-3">Allega file:</label>
-                                <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp">                          </div>
+                                <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp" required>                          </div>
                           <div class="row">
                                 <label class="col-md-3" >Email: </label>
-                                <input class="col-md-8"type="email" id="email" placeholder="Email">
+                                <input class="col-md-8"type="email" id="email" placeholder="Email" required>
                           </div>
                           <div class="row">
                                 <label class="col-md-3" >Messagio: </label>
-                                <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio"></textarea>
+                                <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio" required></textarea>
                             </div>
                           
 
