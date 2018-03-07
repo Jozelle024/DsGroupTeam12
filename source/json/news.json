@@ -1,4 +1,4 @@
-var app = {
+{
     "_comments01" : "------------------------------------------------------------------------------------------------------------------",
     "_comments02" : "",
     "_comments03" : "Creato da Amila Fernando",
@@ -198,6 +198,3 @@ var app = {
     }]
 }
 
-export function getApp() {
-    return app;
-  }
