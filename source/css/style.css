@@ -1,0 +1,38 @@
+body {
+    margin:0;
+    padding: 0px;
+}
+
+.container-fluid{
+   padding: 0;
+}
+
+#navbarNav{
+    display:flex;
+}
+
+.nav-item{
+    flex-grow:1;
+}
+
+
+
+.nav-style{ 
+    display:flex;
+    flex-direction: column;
+    color: white;
+    margin:0;
+    padding:10px;
+}
+
+.logo{
+    max-width:150px;
+    margin-top: -60px;
+}
+
+  
+  
+
+  
+              
+   
