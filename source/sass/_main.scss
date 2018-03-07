@@ -12,12 +12,13 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    .card{
+    article{
         margin: 10px 20px;
         width: 16rem;
         
     }
 }
+
 
 .pagination a{
     color: $font-color;
