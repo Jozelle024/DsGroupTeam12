@@ -4,15 +4,9 @@ header{
 
 h1 , h2 , h3 , h4 , h5 {
     font-family: 'Abril Fatface';
+    font-weight: bold;
 }
- /* #navbarNav{
-     display:flex;
- }
- 
- .nav-item{
-     flex-grow:1;
- }
- */
+
  .nav-style{ 
      display:flex;
      flex-direction: column;

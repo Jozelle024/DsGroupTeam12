@@ -4,16 +4,9 @@ header {
   width: 100%; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Abril Fatface'; }
+  font-family: 'Abril Fatface';
+  font-weight: bold; }
 
-/* #navbarNav{
-     display:flex;
- }
- 
- .nav-item{
-     flex-grow:1;
- }
- */
 .nav-style {
   display: flex;
   flex-direction: column;
@@ -33,6 +26,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+#advSection {
+  width: 80%; }
+  #advSection iframe {
+    resize: both;
+    overflow: auto; }
 
 .modal-rows .row {
   margin: 2%; }
