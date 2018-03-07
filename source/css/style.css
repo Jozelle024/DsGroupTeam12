@@ -3,9 +3,8 @@ body {
     padding: 0px;
 }
 
-nav{
+#navbarNav{
     display:flex;
-  
 }
 
 .nav-item{
@@ -19,7 +18,9 @@ nav{
     padding:10px;
 }
 
-
+.logo{
+    padding-top:0;
+}
 
   
   
