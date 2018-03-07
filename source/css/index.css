@@ -1,12 +1,29 @@
 @import 'https://fonts.googleapis.com/css?family=Lato';
 @import 'https://fonts.googleapis.com/css?family=Abril+Fatface';
 header {
-  background-color: black;
-  color: white;
   width: 100%; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Abril Fatface'; }
+
+/* #navbarNav{
+     display:flex;
+ }
+ 
+ .nav-item{
+     flex-grow:1;
+ }
+ */
+.nav-style {
+  display: flex;
+  flex-direction: column;
+  padding: 10px; }
+
+.logo {
+  max-width: 150px; }
+
+.nav-link {
+  text-align: right; }
 
 html, body {
   height: 100%;
@@ -15,8 +32,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  align-items: center; }
 
 .modal-rows .row {
   margin: 2%; }
@@ -36,7 +52,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex: 1 0 auto;
+  flex: 2 0 auto;
   width: 80%;
   border: 1px solid black;
   box-shadow: 3px 3px 8px 3px gray; }
