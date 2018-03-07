@@ -119,6 +119,19 @@ div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#con
 div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerparagraph p {
     text-align: justify;
 }
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo {
+    width: 80%;
+    position: relative;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div#authorimg {
+    width: 10%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div#authorimg img {
+    border-radius: 50%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#closebutton {
+    width: 20%;
+}
 .clearfix:after {
     content: "";
     display: table;

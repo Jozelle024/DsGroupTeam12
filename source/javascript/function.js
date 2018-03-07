@@ -130,5 +130,4 @@ function setModal (app) {
     }
     document.getElementById ("divauthorname").innerHTML = data.news [app].author.name;
     document.getElementById ("authortype").innerHTML = data.news [app].author.type;
-
 }
