@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <header>
-        
+    <!-- header -->
+    <header> 
         <div class="container-fluid nav-color">
             
             <nav class="navbar navbar-toggleable-md navbar-light bg-faded nav-style">
@@ -44,13 +47,218 @@
                     </ul> 
                 </div>
             </nav>
-        </div>
-      
-    
-        
+        </div>   
     </header>
-    
-    <script src="../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- header -->
+    <div class="container ads-box" >
+        <video width="100%"height="800px" src="https://www.youtube.com/embed/DdMtpHCZYU8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></video>
+    </div>
+    <!-- Main -->
+    <main class="p-1 my-3">
+        <h1>This is the main mid section</h1>
+        <section>
+            <article>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Veniam eveniet, at quas doloremque laboriosam iste odio asperiores 
+                cum aut qui quidem illo reiciendis blanditiis id, corrupti optio! 
+                Animi, repellat aliquid!
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Asperiores quidem, ex eum maiores laboriosam fugit exercitationem 
+                voluptatibus animi totam consequatur dolore temporibus tenetur quam quia, 
+                tempore eos aliquam? Fuga, eaque!
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quo a impedit sed eum vero, debitis, laudantium ullam necessitatibus 
+                inventore ipsam praesentium rerum. Iure eius nostrum adipisci numquam 
+                vitae porro veniam!
+            </article>
+        </section>
+        <h2>This ends the section</h2>
+        
+        <!-- Modal Contattaci -->
+        <div class="modal fade" id="modalForm">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Contattaci</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <h2>Scrivici un messaggio.</h2>
+                  
+                  <form action="" method="POST" class="myForm" class="container">
+                      <div class="modal-rows">
+                        <div class="row">
+                                <label class="col-md-3">Nome: </label>
+                                <input class="col-md-8" type="text" placeholder="Nome" id="nome" required>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Email </label>
+                                <input class="col-md-8"type="email" placeholder="Email" id="email" required>
+        
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Telefono: </label>
+                                <input class="col-md-8"type="tel" placeholder="Numero di telefono" id="tel"required>
+                                
+                            </div>
+                            <div class="row">
+                                <label class="col-md-3">Messaggio: </label>
+                                <textarea class="col-md-8"name="text" id="" cols="30" rows="10" placeholder="Scrivici un messaggio"required></textarea>
+        
+                            </div>
+                      </div>
+                    
+                  </form>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input class="btn btn-dark" type="submit" value="Submit">
+                    <input class="btn btn-dark" type="reset" value="Reset">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <!-- Modal contattaci -->
+
+        <!-- Modal Lavora con noi -->
+        <div class="modal fade" id="modalLavora">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Lavora con noi</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <h2>Vuoi lavorare con noi? Invia il tuo curriculum e lasciaci un messaggio</h2>
+                      
+                      <div class="container modal-rows">
+                          <div class="row">
+                                <label class="col-md-3">Allega file:</label>
+                                <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp">                          </div>
+                          <div class="row">
+                                <label class="col-md-3" >Email: </label>
+                                <input class="col-md-8"type="email" id="email" placeholder="Email">
+                          </div>
+                          <div class="row">
+                                <label class="col-md-3" >Messagio: </label>
+                                <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio"></textarea>
+                            </div>
+                          
+
+                      </div>
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <input class="btn btn-dark" type="submit" value="Submit">
+                        <input class="btn btn-dark" type="reset" value="Reset">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            <!-- Modal lavora con noi -->
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+    </main>
+    <!-- Main -->
+
+    <!--Footer-->
+    <footer class="page-footer font-small dark mt-1">
+        <div class="container">
+            <div class="row pt-3 text-center d-flex justify-content-center">
+                <div class="col-md-3 mb-3">
+                    <h6 class="title font-weight-bold">
+                        <a href="#!">Chi Siamo</a>
+                    </h6>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="title font-weight-bold">
+                        <a href="#!">Dove Trovarci</a>
+                    </h6>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="title font-weight-bold">
+                        <a href="#modalForm"  data-toggle="modal">Contattaci</a>
+                    </h6>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="title font-weight-bold">
+                        <a href="#modalLavora" data-toggle="modal">Lavora con Noi</a>
+                    </h6>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+                <div class="col-md-8 col-12 mt-3">
+                    <p style="line-height: 1.7rem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta distinctio, omnis aliquam ad sed
+                        dolorem! Iure, repellat id! Harum non, ex exercitationem culpa necessitatibus earum ab veritatis
+                        eaque adipisci?
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row py-3">
+                <div class="col-md-12">
+                    <div class="mb-2 d-flex justify-content-center">
+                        <a class="fb-ic" href="#">
+                            <i class="fa fa-facebook fa-lg white-text mr-4"> </i>
+                        </a>
+                        <a class="tw-ic" href="#">
+                            <i class="fa fa-twitter fa-lg white-text mr-4"> </i>
+                        </a>
+                        <a class="gplus-ic" href="#">
+                            <i class="fa fa-google-plus fa-lg white-text mr-4"> </i>
+                        </a>
+                        <a class="li-ic" href="#">
+                            <i class="fa fa-linkedin fa-lg white-text mr-4"> </i>
+                        </a>
+                        <a class="ins-ic" href="#">
+                            <i class="fa fa-instagram fa-lg white-text mr-4"> </i>
+                        </a>
+                        <a class="pin-ic" href="#">
+                            <i class="fa fa-pinterest fa-lg white-text"> </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2018 Copyright
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
