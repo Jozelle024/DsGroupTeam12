@@ -59,6 +59,7 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h1 {
     font-size: 2em;
+    text-transform: uppercase;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h2, div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer span {
     font-size: 1.5em;
@@ -78,10 +79,12 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4.section {
     text-align: left;
     left: 5%;
+    text-transform: capitalize;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4.author {
     text-align: right;
     right: 5%;
+    text-transform: uppercase;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4 {
     margin: 0px;
@@ -89,6 +92,32 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.
     margin-bottom: 5%;
     bottom: 0px;
     font-size: 1em;
+}
+div#maincontainer main div.modal-dialog {
+    max-width: 100%;
+}
+div#maincontainer main div.modal-dialog div.modal-content {
+    width: 90%;
+    margin: 0px auto;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-header div#section h4#divsection {
+    text-transform: capitalize;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-header div#day h4#divday {
+    text-transform: uppercase;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerarticleimg {
+    width: 80%;
+    margin: 0px auto;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerarticleimg img {
+    width: 100%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerparagraph p:first-child {
+    padding-top: 5%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerparagraph p {
+    text-align: justify;
 }
 .clearfix:after {
     content: "";
