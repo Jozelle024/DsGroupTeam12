@@ -29,7 +29,7 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a {
     color: white;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.img {
-    background-image: url("https://images.wired.it/wp-content/uploads/2017/11/15165004/1510757403_lenti.jpg");
+    /*background-image: url("https://images.wired.it/wp-content/uploads/2017/11/15165004/1510757403_lenti.jpg");*/
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.imgcontainer {
     opacity: 1;
@@ -48,10 +48,14 @@ div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.
     overflow: hidden;
     top: 0px;
     background-color: rgba(78,69,68,.7);
-    display: none;
+    display: block;
+    opacity: 0;
+    -webkit-transition: -webkit-opacity 1s linear;
+    -moz-transition: -moz-opacity 1s linear;
+    transition: opacity 1s linear;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a:hover div.colcontainerfade {
-    display: block;
+    opacity: 1;
 }
 div#maincontainer main div#subcontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer {
     text-align: center;

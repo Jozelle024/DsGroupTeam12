@@ -1,7 +1,7 @@
 var data = getApp ();
 
 $(document).ready (function () {
-    for (var cont=0;cont<Math.ceil(data.news.length/2);cont++) {
+    /*for (var cont=0;cont<Math.ceil(data.news.length/2);cont++) {
         var divrowcontainerclearfix = document.createElement ("div");
         divrowcontainerclearfix.className += (" rowcontainer");
         divrowcontainerclearfix.className += (" clearfix");
@@ -91,7 +91,7 @@ $(document).ready (function () {
                             divfootercontainer.appendChild (h4author);
         }
         document.getElementById ("subcontainer").appendChild (divrowcontainerclearfix);
-    }
+    }*/
 });
 
 function setModal (app) {
