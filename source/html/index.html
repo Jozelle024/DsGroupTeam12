@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../javascript/news.js"></script>
+    <script src="../javascript/function.js"></script>
+    <script src="../../node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>>
 </head>
 <body>
     <!-- header -->
@@ -56,9 +60,58 @@
             allowfullscreen></iframe>
     </div>
     <!-- Main -->
-    <main class="p-1 my-3">
-        
-        <!-- Modal Contattaci -->
+    
+    <div id="maincontainer">
+        <main>
+            <div id="subcontainer">
+                <div id="controlsort">
+                    <p>Sort By
+                        <select id="sortselect" onchange="setPage ()">
+                            <option value="id" selected>Id</option>
+                            <option value="article">Alfabetical (Article)</option>
+                            <option value="author">Alfabetical (Author)</option>
+                            <option value="date">Date (From Last)</option>
+                        </select>
+                    </p>
+                </div>
+                <div id="articlecontainer">
+                </div>
+            </div>
+            <div id="modale" class="modal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div id="section">
+                                <h4 id="divsection"></h4>
+                            </div>
+                            <div id="day">
+                                <h4 id="divday"></h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div id="containermodalbody">
+                                <div id="containerarticleimg"></div>
+                                <div id="containerparagraph"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div id="authorinfo">
+                                <div id="authorimg"></div>
+                                <div id="authorname">
+                                    <h4 id="divauthorname"></h4>
+                                </div>
+                                <div id="authortype">
+                                    <h4 id="authortype"></h4>
+                                </div>
+                            </div>
+                            <div id="closebutton">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Contattaci -->
         <div class="modal fade" id="modalForm">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -95,10 +148,7 @@
         
                             </div>
                       </div>
-                    
-                  
                 </div>
-                
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <input class="btn btn-dark" type="submit" value="Submit">
@@ -114,49 +164,42 @@
 
         <!-- Modal Lavora con noi -->
         <div class="modal fade" id="modalLavora">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                  
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <h4 class="modal-title">Lavora con noi</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      <h2>Vuoi lavorare con noi? Invia il tuo curriculum e lasciaci un messaggio</h2>
-                      <form action="" method="POST">
-                      <div class="container modal-rows">
-                          <div class="row">
-                                <label class="col-md-3">Allega file:</label>
-                                <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp" required>                          </div>
-                          <div class="row">
-                                <label class="col-md-3" >Email: </label>
-                                <input class="col-md-8"type="email" id="email" placeholder="Email" required>
-                          </div>
-                          <div class="row">
-                                <label class="col-md-3" >Messagio: </label>
-                                <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio" required></textarea>
-                            </div>
-                          
-
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Lavora con noi</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <h2>Vuoi lavorare con noi? Invia il tuo curriculum e lasciaci un messaggio</h2>
+                  <form action="" method="POST">
+                  <div class="container modal-rows">
+                      <div class="row">
+                            <label class="col-md-3">Allega file:</label>
+                            <input type="file" class="form-control-file col-md-8" id="exampleInputFile" aria-describedby="fileHelp" required>                          </div>
+                      <div class="row">
+                            <label class="col-md-3" >Email: </label>
+                            <input class="col-md-8"type="email" id="email" placeholder="Email" required>
                       </div>
-                    </div>
-                    
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <input class="btn btn-dark" type="submit" value="Submit">
-                        <input class="btn btn-dark" type="reset" value="Reset">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </form>
-                    </div>
-                    
+                      <div class="row">
+                            <label class="col-md-3" >Messagio: </label>
+                            <textarea class="col-md-8" name="messaggio" id="mesaggio" cols="30" rows="10" placeholder="Lascia un messaggio" required></textarea>
+                        </div>
                   </div>
                 </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input class="btn btn-dark" type="submit" value="Submit">
+                    <input class="btn btn-dark" type="reset" value="Reset">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </form>
+                </div>
               </div>
-            <!-- Modal lavora con noi -->
-
+            </div>
+          </div>
+        <!-- Modal lavora con noi -->
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -166,9 +209,12 @@
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
         </nav>
-
-    </main>
     <!-- Main -->
+        </main>
+    </div>
+        
+
+        
 
     <!--Footer-->
     <footer class="page-footer font-small dark mt-1">
@@ -245,4 +291,6 @@
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
+        
+    </body>
 </html>

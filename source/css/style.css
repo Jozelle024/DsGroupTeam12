@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+}
+div#maincontainer {
+    width: 80%;
+    margin: 0px auto;
+    position: relative;
+}
+div#maincontainer main div#subcontainer div#articlecontainer {
+    width: 100%;
+    position: relative;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer {
+    float: left;
+    position: relative;
+    width: 50%;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.img {
+    background-color: rgba(78,69,68,.7);
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.img img {
+    max-height: 100%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.imgcontainer {
+    opacity: 1;
+    padding-bottom: 100%;
+    overflow: hidden;
+    position: relative;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 20;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0px;
+    background-color: rgba(78,69,68,.7);
+    display: block;
+    opacity: 0;
+    -webkit-transition: -webkit-opacity 1s linear;
+    -moz-transition: -moz-opacity 1s linear;
+    transition: opacity 1s linear;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a:hover div.colcontainerfade {
+    opacity: 1;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer {
+    text-align: center;
+    height: 100%;;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h2, div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer span {
+    font-size: 1.5em;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a:hover div.colcontainerfade div.titlecontainer span {
+    text-decoration: underline;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h1, div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.titlecontainer h2 {
+    padding: 5% 0%;
+    margin: 0%;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4.section {
+    text-align: left;
+    left: 5%;
+    text-transform: capitalize;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4.author {
+    text-align: right;
+    right: 5%;
+    text-transform: uppercase;
+}
+div#maincontainer main div#subcontainer div#articlecontainer div.rowcontainer div.colcontainer a div.colcontainerfade div.footercontainer h4 {
+    margin: 0px;
+    position: absolute;
+    margin-bottom: 5%;
+    bottom: 0px;
+    font-size: 1em;
+}
+div#maincontainer main div.modal-dialog {
+    max-width: 100%;
+}
+div#maincontainer main div.modal-dialog div.modal-content {
+    width: 90%;
+    margin: 0px auto;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-header div#section h4#divsection {
+    text-transform: capitalize;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-header div#day h4#divday {
+    text-transform: uppercase;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerarticleimg {
+    width: 80%;
+    margin: 0px auto;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerarticleimg img {
+    width: 100%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerparagraph p:first-child {
+    padding-top: 5%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#containermodalbody div#containerparagraph p {
+    text-align: justify;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo {
+    width: 80%;
+    position: relative;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div#authorimg {
+    width: 10%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div#authorimg img {
+    border-radius: 50%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#closebutton {
+    width: 20%;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
