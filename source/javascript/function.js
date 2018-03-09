@@ -4,12 +4,12 @@ function setPage () {
     var app = $("#sortselect").val();
     switch (app) {
         case "id" :
+            cancellaPrecedenti ();
+            sortById ();
         break;
         case "article" :
-        break;
-        case "author" :
-        break;
-        case "date" :
+            cancellaPrecedenti ();
+            sortByArticle ();
         break;
     }
 }
@@ -18,13 +18,12 @@ $(document).ready (function () {
     var app = $("#sortselect").val();
     switch (app) {
         case "id" :
+            cancellaPrecedenti ();
             sortById ();
         break;
         case "article" :
-        break;
-        case "author" :
-        break;
-        case "date" :
+            cancellaPrecedenti ();
+            sortByArticle ();
         break;
     }
 });
@@ -122,6 +121,75 @@ function sortById () {
                             divfootercontainer.appendChild (h4author);
         }
         document.getElementById ("articlecontainer").appendChild (divrowcontainer);
+    }
+}
+
+function sortByArticle () {
+    var vet = [];
+    for (var cont=0;cont<data.news.length;cont++) {
+        vet.push (data.news [cont].mainTitle);
+    }
+    vet.sort ();
+    for (var cont=0;cont<data.news.length;cont++) {
+        for (var conta=0;conta<data.news.length;conta++) {
+            if (vet[cont]===data.news[conta].mainTitle) {
+                if (cont%2===0) {
+                    var divrowcontainer = document.createElement ("div");
+                    divrowcontainer.className += ("rowcontainer");
+                    document.getElementById ("articlecontainer").appendChild (divrowcontainer);
+                }
+                var divcolcontainer = document.createElement ("div");
+                divcolcontainer.className += (" colcontainer");
+                divrowcontainer.appendChild (divcolcontainer);
+                    var a = document.createElement ("a");
+                    a.setAttribute("id", "a"+ (conta));
+                    a.setAttribute ("href", "#modale");
+                    a.setAttribute ("data-target", "#modale");
+                    a.setAttribute ("data-toggle", "modal");
+                    a.setAttribute ("onclick", "setModal (this.id)");
+                    divcolcontainer.appendChild (a);
+                        var divimgcontainerimg = document.createElement ("div");
+                        divimgcontainerimg.className += ("imgcontainer img");
+                        a.appendChild (divimgcontainerimg);
+                            var img = document.createElement ("img");
+                            img.setAttribute ("src", data.news [conta].img[0]);
+                            img.setAttribute ("srcset", data.news [conta].img[1] + " 1050w, " + data.news [conta].img[2] + " 696w, " + data.news [conta].img[3] + " 400w");
+                            divimgcontainerimg.appendChild (img);
+                        var divcolcontainerfade = document.createElement ("div");
+                        divcolcontainerfade.className += ("colcontainerfade");
+                        a.appendChild (divcolcontainerfade);
+                            var divtitlecontainer = document.createElement ("div");
+                            divtitlecontainer.className += ("titlecontainer");
+                            divcolcontainerfade.appendChild (divtitlecontainer);
+                                var h1 = document.createElement ("h1");
+                                h1.innerHTML = data.news [conta].mainTitle;
+                                divtitlecontainer.appendChild (h1);
+                                var h2 = document.createElement ("h2");
+                                h2.innerHTML = data.news [conta].subTitle;
+                                divtitlecontainer.appendChild (h2);
+                                var span = document.createElement ("span");
+                                span.innerHTML = "continua...";
+                                divtitlecontainer.appendChild (span);
+                            var divfootercontainer = document.createElement ("div");
+                            divfootercontainer.className += ("footercontainer");
+                            divcolcontainerfade.appendChild (divfootercontainer);
+                                var h4section = document.createElement ("h4");
+                                h4section.className += ("section");
+                                h4section.innerHTML = data.news [conta].headSection + "-" + data.news [conta].subSection;
+                                divfootercontainer.appendChild (h4section);
+                                var h4author = document.createElement ("h4");
+                                h4author.className += ("author");
+                                h4author.innerHTML = data.news [conta].author.name;
+                                divfootercontainer.appendChild (h4author);
+            }
+        }
+    }
+}
+
+function cancellaPrecedenti () {
+    var app = document.getElementById ("articlecontainer");
+    while (app.firstChild) {
+        app.removeChild(app.firstChild);
     }
 }
 
