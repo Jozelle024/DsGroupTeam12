@@ -126,7 +126,7 @@ function sortById () {
 function setModal (app) {
     app = app.substring(1);
     //modal header
-    document.getElementById ("divsection").innerHTML = data.news [app].headSection + "-" + data.news [app].subSection;
+    document.getElementById ("divsection").innerHTML = data.news[app].headSection + "-" + data.news[app].subSection;
     document.getElementById ("divday").innerHTML = data.news [app].author.day;
     //modal body
     if(document.getElementById ("imgmain")==null) {
