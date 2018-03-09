@@ -37,6 +37,7 @@ function sortById () {
             divcolcontainer.className += (" colcontainer");
             divrowcontainer.appendChild (divcolcontainer);
                 var a = document.createElement ("a");
+                a.setAttribute("id", "a"+ (cont+cont+1));
                 a.setAttribute ("href", "#modale");
                 a.setAttribute ("data-target", "#modale");
                 a.setAttribute ("data-toggle", "modal");
@@ -80,6 +81,7 @@ function sortById () {
             divcolcontainer.className += ("colcontainer");
             divrowcontainer.appendChild (divcolcontainer);
                 var a = document.createElement ("a");
+                a.setAttribute("id", "a"+ (cont+cont+2));
                 a.setAttribute ("href", "#modale");
                 a.setAttribute ("data-target", "#modale");
                 a.setAttribute ("data-toggle", "modal");
