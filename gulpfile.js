@@ -26,11 +26,12 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('sass', function(){
-    return gulp.src('./sass/*.scss')
+    return gulp.src('./source/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./source/css'));
+        
 });
 
 gulp.task('sassWatch',function(){
-    gulp.watch('./sass/*.scss', ['sass']);
+    gulp.watch('./source/sass/*.scss', ['sass']);
 });

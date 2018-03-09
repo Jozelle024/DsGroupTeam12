@@ -1,0 +1,17 @@
+.modal-rows .row{
+    margin: 2%;
+    input{
+        border-radius: 5px;
+        border: 1px solid black;
+
+    }
+    textarea{
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+}
+
+.btn-dark{
+    color: $font-color;
+    background-color: $primary-color;
+}

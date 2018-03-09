@@ -1,0 +1,22 @@
+header{
+    width: 100%;
+}
+
+h1 , h2 , h3 , h4 , h5 {
+    font-family: 'Abril Fatface';
+    font-weight: bold;
+}
+
+ .nav-style{ 
+     display:flex;
+     flex-direction: column;
+     padding:10px;
+ }
+ 
+ .logo{
+     max-width:150px;
+ }
+
+ .nav-link{
+     text-align: right;
+ }
