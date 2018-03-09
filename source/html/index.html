@@ -18,25 +18,17 @@
             <header></header>
             <main>
                 <div id="subcontainer">
-                    <div class="rowcontainer clearfix" id="containerrow">
-                        <div class="colcontainer" id="containercol">
-                            <a href="#modale" data-target="#modale" data-toggle="modal" id="a" onclick="setModal (this.id)">
-                                <div class="imgcontainer img">
-                                    <img src="https://images.wired.it/wp-content/uploads/2017/11/15165004/1510757403_lenti.jpg" alt="">
-                                </div>
-                                <div class="colcontainerfade">
-                                    <div class="titlecontainer">
-                                        <h1>Se gli astronomi usano l’intelligenza artificiale per scovare le lenti gravitazionali</h1>
-                                        <h2>Un algoritmo nutrito con milioni di immagini di una porzione di cielo individua centinaia di lenti, poi ridotte a 56 dagli astronomi, essenziali per indagare la materia oscura</h2>
-                                        <span>continua...</span>
-                                    </div>
-                                    <div class="footercontainer">
-                                        <h4 class="section">Inteligenza Artificiale - Storie</h4>
-                                        <h4 class="author"><strong>Simone Cosimi </strong></h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                    <div id="controlsort">
+                        <p>Sort By
+                            <select id="sortselect" onchange="setPage ()">
+                                <option value="id" selected>Id</option>
+                                <option value="article">Alfabetical (Article)</option>
+                                <option value="author">Alfabetical (Author)</option>
+                                <option value="date">Date (From Last)</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div id="articlecontainer">
                     </div>
                 </div>
                 <div id="modale" class="modal">
