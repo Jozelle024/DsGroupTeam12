@@ -1,19 +1,5 @@
 var data = getApp ();
 
-function setPage () {
-    var app = $("#sortselect").val();
-    switch (app) {
-        case "id" :
-            cancellaPrecedenti ();
-            addArticle (sortById ());
-        break;
-        case "article" :
-            cancellaPrecedenti ();
-            addArticle (sortByArticle ());
-        break;
-    }
-}
-
 $(document).ready (function () {
     var app = $("#sortselect").val();
     switch (app) {
@@ -28,7 +14,72 @@ $(document).ready (function () {
     }
 });
 
-function sortById () {
+function setPage () {   //onchange del tag select
+    var app = $("#sortselect").val();
+    switch (app) {
+        case "id" :
+            cancellaPrecedenti ();
+            addArticle (sortById ());
+        break;
+        case "article" :
+            cancellaPrecedenti ();
+            addArticle (sortByArticle ());
+        break;
+    }
+}
+
+function cancellaPrecedenti () {    //cancella i nodi figli
+    var app = document.getElementById ("articlecontainer");
+    while (app.firstChild) {
+        app.removeChild(app.firstChild);
+    }
+}
+
+function onlyIA () {    //seleziona solo "headSection" : "Inteligenza Artificiale"
+    var vetId = [];
+    for (cont=0;cont<data.news.length;cont++) {
+        if (data.news[cont].headSection==="Inteligenza Artificiale") {
+            vetId.push (data.news [cont].id);
+        }
+    }
+    cancellaPrecedenti ();
+    addArticle (vetId)
+}
+
+function onlyAttualita () {    //seleziona solo "headSection" : "ATTUALITÀ"
+    var vetId = [];
+    for (cont=0;cont<data.news.length;cont++) {
+        if (data.news[cont].headSection==="ATTUALITÀ") {
+            vetId.push (data.news [cont].id);
+        }
+    }
+    cancellaPrecedenti ();
+    addArticle (vetId)
+}
+
+function onlyEconomia () {    //seleziona solo "headSection" : "ECONOMIA"
+    var vetId = [];
+    for (cont=0;cont<data.news.length;cont++) {
+        if (data.news[cont].headSection==="ECONOMIA") {
+            vetId.push (data.news [cont].id);
+        }
+    }
+    cancellaPrecedenti ();
+    addArticle (vetId)
+}
+
+function onlyInternet () {    //seleziona solo "headSection" : "INTERNET"
+    var vetId = [];
+    for (cont=0;cont<data.news.length;cont++) {
+        if (data.news[cont].headSection==="INTERNET") {
+            vetId.push (data.news [cont].id);
+        }
+    }
+    cancellaPrecedenti ();
+    addArticle (vetId)
+}
+
+function sortById () {  //ordina per id
     var vetId = [];
     for (var cont=0;cont<data.news.length;cont++) {
         vetId.push (data.news [cont].id);
@@ -36,7 +87,7 @@ function sortById () {
     return vetId;
 }
 
-function sortByArticle () {
+function sortByArticle () { //ordina per titolo (mainTitle)
     var vet = [], vetId = [];
     for (var cont=0;cont<data.news.length;cont++) {
         vet.push (data.news [cont].mainTitle);
@@ -52,7 +103,7 @@ function sortByArticle () {
     return vetId;
 }
 
-function addArticle (vet) {
+function addArticle (vet) { //inserisce gli articoli
     for (var cont=0;cont<data.news.length;cont++) {
         for (var conta=0;conta<data.news.length;conta++) {
             if (vet[cont]===data.news[conta].id) {
@@ -109,14 +160,7 @@ function addArticle (vet) {
     }
 }
 
-function cancellaPrecedenti () {
-    var app = document.getElementById ("articlecontainer");
-    while (app.firstChild) {
-        app.removeChild(app.firstChild);
-    }
-}
-
-function setModal (app) {
+function setModal (app) {   //crea i modali
     app = app.substring(1);
     //modal header
     document.getElementById ("divsection").innerHTML = data.news[app].headSection + "-" + data.news[app].subSection;
