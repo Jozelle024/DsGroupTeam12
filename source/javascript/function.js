@@ -103,7 +103,7 @@ function sortByArticle () { //ordina per titolo (mainTitle)
     return vetId;
 }
 
-function addArticle (vet) { //inserisce gli articoli
+function addArticle (vet) { //inserisce gli articoli per id
     for (var cont=0;cont<data.news.length;cont++) {
         for (var conta=0;conta<data.news.length;conta++) {
             if (vet[cont]===data.news[conta].id) {
@@ -194,6 +194,6 @@ function setModal (app) {   //crea i modali
     } else {
         $("#imgauthor").attr ("src", data.news [app].author.imga);
     }
-    document.getElementById ("divauthorname").innerHTML = data.news [app].author.name;
-    document.getElementById ("authortype").innerHTML = data.news [app].author.type;
+    document.getElementById ("h4authorname").innerHTML = data.news [app].author.name;
+    document.getElementById ("h6authortype").innerHTML = data.news [app].author.type;
 }

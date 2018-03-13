@@ -134,6 +134,14 @@ div#maincontainer main div.modal-dialog div.modal-content div.modal-body div#con
 div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo {
     width: 80%;
     position: relative;
+    display: -webkit-flex;  /* Safari */
+    display: flex;
+    -webkit-flex-direction: row;    /* Safari 6.1+ */
+    flex-direction: row;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div {
+    margin: auto 1%;
+    text-align: center;
 }
 div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#authorinfo div#authorimg {
     width: 10%;
@@ -143,6 +151,9 @@ div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#a
 }
 div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#closebutton {
     width: 20%;
+}
+div#maincontainer main div.modal-dialog div.modal-content div.modal-footer div#closebutton button.btn {
+    float: right;
 }
 .clearfix:after {
     content: "";
