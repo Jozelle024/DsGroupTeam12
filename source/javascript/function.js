@@ -5,11 +5,11 @@ function setPage () {
     switch (app) {
         case "id" :
             cancellaPrecedenti ();
-            sortById ();
+            addArticle (sortById ());
         break;
         case "article" :
             cancellaPrecedenti ();
-            sortByArticle ();
+            addArticle (sortByArticle ());
         break;
     }
 }
@@ -19,120 +19,43 @@ $(document).ready (function () {
     switch (app) {
         case "id" :
             cancellaPrecedenti ();
-            sortById ();
+            addArticle (sortById ());
         break;
         case "article" :
             cancellaPrecedenti ();
-            sortByArticle ();
+            addArticle (sortByArticle ());
         break;
     }
 });
 
 function sortById () {
-    for (var cont=0;cont<Math.ceil(data.news.length/2);cont++) {
-        var divrowcontainer = document.createElement ("div");
-        divrowcontainer.className += ("rowcontainer");
-            var divcolcontainer = document.createElement ("div");
-            divcolcontainer.className += (" colcontainer");
-            divrowcontainer.appendChild (divcolcontainer);
-                var a = document.createElement ("a");
-                a.setAttribute("id", "a"+ (cont+cont+1));
-                a.setAttribute ("href", "#modale");
-                a.setAttribute ("data-target", "#modale");
-                a.setAttribute ("data-toggle", "modal");
-                a.setAttribute ("onclick", "setModal (this.id)");
-                divcolcontainer.appendChild (a);
-                    var divimgcontainerimg = document.createElement ("div");
-                    divimgcontainerimg.className += ("imgcontainer img");
-                    a.appendChild (divimgcontainerimg);
-                        var img = document.createElement ("img");
-                        img.setAttribute ("src", data.news [cont+cont].img[0]);
-                        img.setAttribute ("srcset", data.news [cont+cont].img[1] + " 1050w, " + data.news [cont+cont].img[2] + " 696w, " + data.news [cont+cont].img[3] + " 400w");
-                        divimgcontainerimg.appendChild (img);
-                    var divcolcontainerfade = document.createElement ("div");
-                    divcolcontainerfade.className += ("colcontainerfade");
-                    a.appendChild (divcolcontainerfade);
-                        var divtitlecontainer = document.createElement ("div");
-                        divtitlecontainer.className += ("titlecontainer");
-                        divcolcontainerfade.appendChild (divtitlecontainer);
-                            var h1 = document.createElement ("h1");
-                            h1.innerHTML = data.news [cont+cont].mainTitle;
-                            divtitlecontainer.appendChild (h1);
-                            var h2 = document.createElement ("h2");
-                            h2.innerHTML = data.news [cont+cont].subTitle;
-                            divtitlecontainer.appendChild (h2);
-                            var span = document.createElement ("span");
-                            span.innerHTML = "continua...";
-                            divtitlecontainer.appendChild (span);
-                        var divfootercontainer = document.createElement ("div");
-                        divfootercontainer.className += ("footercontainer");
-                        divcolcontainerfade.appendChild (divfootercontainer);
-                            var h4section = document.createElement ("h4");
-                            h4section.className += ("section");
-                            h4section.innerHTML = data.news [cont+cont].headSection + "-" + data.news [cont+cont].subSection;
-                            divfootercontainer.appendChild (h4section);
-                            var h4author = document.createElement ("h4");
-                            h4author.className += ("author");
-                            h4author.innerHTML = data.news [cont+cont].author.name;
-                            divfootercontainer.appendChild (h4author);
-        if(cont+cont+1<data.news.length) {
-            var divcolcontainer = document.createElement ("div");
-            divcolcontainer.className += ("colcontainer");
-            divrowcontainer.appendChild (divcolcontainer);
-                var a = document.createElement ("a");
-                a.setAttribute("id", "a"+ (cont+cont+2));
-                a.setAttribute ("href", "#modale");
-                a.setAttribute ("data-target", "#modale");
-                a.setAttribute ("data-toggle", "modal");
-                a.setAttribute ("onclick", "setModal (this.id)");
-                divcolcontainer.appendChild (a);
-                    var divimgcontainerimg = document.createElement ("div");
-                    divimgcontainerimg.className += ("imgcontainer img");
-                    a.appendChild (divimgcontainerimg);
-                        var img = document.createElement ("img");
-                        img.setAttribute ("src", data.news [cont+cont+1].img[0]);
-                        img.setAttribute ("srcset", data.news [cont+cont+1].img[1] + " 1050w, " + data.news [cont+cont+1].img[2] + " 696w, " + data.news [cont+cont+1].img[3] + " 400w");
-                        divimgcontainerimg.appendChild (img);
-                    var divcolcontainerfade = document.createElement ("div");
-                    divcolcontainerfade.className += ("colcontainerfade");
-                    a.appendChild (divcolcontainerfade);
-                        var divtitlecontainer = document.createElement ("div");
-                        divtitlecontainer.className += ("titlecontainer");
-                        divcolcontainerfade.appendChild (divtitlecontainer);
-                            var h1 = document.createElement ("h1");
-                            h1.innerHTML = data.news [cont+cont+1].mainTitle;
-                            divtitlecontainer.appendChild (h1);
-                            var h2 = document.createElement ("h2");
-                            h2.innerHTML = data.news [cont+cont+1].subTitle;
-                            divtitlecontainer.appendChild (h2);
-                            var span = document.createElement ("span");
-                            span.innerHTML = "continua...";
-                            divtitlecontainer.appendChild (span);
-                        var divfootercontainer = document.createElement ("div");
-                        divfootercontainer.className += ("footercontainer");
-                        divcolcontainerfade.appendChild (divfootercontainer);
-                            var h4section = document.createElement ("h4");
-                            h4section.className += ("section");
-                            h4section.innerHTML = data.news [cont+cont+1].headSection + "-" + data.news [cont+cont+1].subSection;
-                            divfootercontainer.appendChild (h4section);
-                            var h4author = document.createElement ("h4");
-                            h4author.className += ("author");
-                            h4author.innerHTML = data.news [cont+cont+1].author.name;
-                            divfootercontainer.appendChild (h4author);
-        }
-        document.getElementById ("articlecontainer").appendChild (divrowcontainer);
+    var vetId = [];
+    for (var cont=0;cont<data.news.length;cont++) {
+        vetId.push (data.news [cont].id);
     }
+    return vetId;
 }
 
 function sortByArticle () {
-    var vet = [];
+    var vet = [], vetId = [];
     for (var cont=0;cont<data.news.length;cont++) {
         vet.push (data.news [cont].mainTitle);
     }
     vet.sort ();
-    for (var cont=0;cont<data.news.length;cont++) {
+    for (cont=0;cont<data.news.length;cont++) {
         for (var conta=0;conta<data.news.length;conta++) {
             if (vet[cont]===data.news[conta].mainTitle) {
+                vetId.push (data.news [conta].id);
+            }
+        }
+    }
+    return vetId;
+}
+
+function addArticle (vet) {
+    for (var cont=0;cont<data.news.length;cont++) {
+        for (var conta=0;conta<data.news.length;conta++) {
+            if (vet[cont]===data.news[conta].id) {
                 if (cont%2===0) {
                     var divrowcontainer = document.createElement ("div");
                     divrowcontainer.className += ("rowcontainer");
