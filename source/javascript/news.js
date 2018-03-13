@@ -42,7 +42,7 @@ var app = {
         }
     }, {
         "id" : 2,
-        "headSection" : "Inteligenza artificiale",
+        "headSection" : "Inteligenza Artificiale",
         "subSection" : "Storie",
         "mainTitle" : "L’Intelligenza artificiale nell’automotive varrà 14 miliardi di dollari entro il 2025",
         "subTitle" : "Boom dai 404 milioni del 2016. Ed entro tre anni i veicoli connessi saranno 250 milioni. Dal riconoscimento delle emozioni alla manutenzione predittiva, algoritmi e big data cambieranno volto al settore",
